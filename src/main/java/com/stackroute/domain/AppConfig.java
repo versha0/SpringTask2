@@ -10,17 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
-@ComponentScan("com.stackroute.domain")
+@ComponentScan("com.stackroute")
+
 
 public class AppConfig {
-    @Bean
-    public BeanLifeCycleDemoBean getBeanLifeCycleDemoBean(){
-        return new BeanLifeCycleDemoBean();
-    }
-    @Bean
-    public BeanPostProcessorDemoBean getBeanPostProcessorDemoBean(){
-        return new BeanPostProcessorDemoBean();
-    }
+
 
     }
 
