@@ -1,4 +1,5 @@
 import com.stackroute.demo.BeanLifeCycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.AppConfig;
 import com.stackroute.domain.Movie;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +15,7 @@ public class Main {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Movie movie1 = context.getBean(Movie.class);
         BeanLifeCycleDemoBean beanLifeCycleDemoBean=(BeanLifeCycleDemoBean) context.getBean(BeanLifeCycleDemoBean.class);
-
+        
         movie1.print();
         context.close();
     }
