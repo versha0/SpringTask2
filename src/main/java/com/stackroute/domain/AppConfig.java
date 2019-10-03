@@ -7,21 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
+@ComponentScan("com.stackroute.domain")
 
 public class AppConfig {
-    @Bean
 
-    public Actor getactor() {
-
-
-        return new  Actor();
-
-    }
-
-    @Bean
-
-    public Movie getmovie() {
-
-        return new Movie();
-    }
 }
