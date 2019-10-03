@@ -9,8 +9,12 @@ public class Main {
 
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Movie movie = context.getBean(Movie.class);
-        movie.print();
+        Movie movie1 = context.getBean(Movie.class);
+        Movie movie2= context.getBean(Movie.class);
+        if(movie1==movie2)
+            System.out.println(true);
+        else
+            System.out.println(false);
 
     }
 }

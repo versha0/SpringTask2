@@ -1,16 +1,22 @@
 package com.stackroute.domain;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
+
 public class AppConfig {
     @Bean
-    public Actor getactor(){
-        return new Actor("irfan", "male",23);
+    @Scope("prototype")
+    public Actor getactor() {
+        return new Actor("irfan", "male", 23);
     }
+
     @Bean
-    public Movie getmovie(){
+    @Scope("prototype")
+    public Movie getmovie() {
         return new Movie(getactor());
     }
 }
