@@ -17,9 +17,6 @@ public class Movie {
     }
 
 
-
-
-
     public void print(){
         actor.print();
     }
